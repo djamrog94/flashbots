@@ -79,7 +79,7 @@ func (f *SendBundleFactory) Returns(hash *common.Hash) *SendBundleFactory {
 // CreateRequest implements the w3/core.RequestCreator interface.
 func (f *SendBundleFactory) CreateRequest() (rpc.BatchElem, error) {
 	return rpc.BatchElem{
-		Method: "eth_sendBundle",
+		Method: "mev_sendBundle",
 		Args:   []interface{}{f.param},
 		Result: &f.result,
 	}, nil
